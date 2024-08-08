@@ -1,6 +1,8 @@
-const NavBarSection = ({ bg }) => {
-    console.log(bg)
-    return <div className="navbar bg-base-300 w-full">
+import { Link } from "@/navigation"
+const NavBarSection = async ({ bg, links, params }) => {
+
+    // console.log(params)
+    return <nav className={`navbar ${bg} w-full`}>
         <div className="flex-none lg:hidden">
             <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
                 <svg
@@ -20,11 +22,10 @@ const NavBarSection = ({ bg }) => {
         <div className="hidden flex-none lg:block">
             <ul className="menu menu-horizontal">
                 {/* Navbar menu links here */}
-                <li><a>Navbar Item 1</a></li>
-                <li><a>Navbar Item 2</a></li>
+                {links.map(el => <li id={el.id}><Link href={el.href}>{el.name}</Link></li>)}
             </ul>
         </div>
-    </div>
+    </nav>
 }
 
 export default NavBarSection
