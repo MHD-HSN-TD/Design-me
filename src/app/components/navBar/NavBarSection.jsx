@@ -1,5 +1,6 @@
 import { Link } from "@/navigation"
-const NavBarSection = async ({ bg, links, params }) => {
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher"
+const NavBarSection = async ({ bg, links, locale }) => {
 
     // console.log(params)
     return <nav className={`navbar ${bg} w-full`}>
@@ -23,6 +24,7 @@ const NavBarSection = async ({ bg, links, params }) => {
             <ul className="menu menu-horizontal">
                 {/* Navbar menu links here */}
                 {links.map(el => <li id={el.id}><Link href={el.href}>{el.name}</Link></li>)}
+                <LanguageSwitcher locale={locale}></LanguageSwitcher>
             </ul>
         </div>
     </nav>

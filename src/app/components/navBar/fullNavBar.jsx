@@ -8,7 +8,9 @@ import { getLocale } from "next-intl/server";
 
 const NavBar = async ({ children }) => {
     // choose the color of the navBar and the Drawer
-    const backGroundColor = ' bg-neutral'
+    const backGroundColor = ' bg-primary'
+
+
     const links_EN = [
         { id: 0, href: '/', name: 'Home' },
         { id: 1, href: '/test', name: 'test' },
@@ -31,7 +33,7 @@ const NavBar = async ({ children }) => {
         if (locale == 'ar') {
             links = [...links_AR]
         } else if (locale == 'en') {
-            links = links_EN
+            links = [...links_EN]
         } else return
     }
     // call the fnc
@@ -42,11 +44,11 @@ const NavBar = async ({ children }) => {
 
     return (
         <div>
-            <div className={`drawer  `}>
+            <div className={`drawer  r`}>
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col">
+                <div className="drawer-content flex flex-col theme-controller">
                     {/* Navbar */}
-                    <NavBarSection bg={backGroundColor} links={links} />
+                    <NavBarSection bg={backGroundColor} links={links} locale={locale} />
                     {/* Page content here */}
                     {children}
                 </div>
