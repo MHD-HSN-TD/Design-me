@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Cairo } from "next/font/google";
 import "./globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server'
@@ -7,7 +7,7 @@ import NavBar from "../components/navBar/fullNavBar";
 import Footer from "../components/Footer/Footer";
 
 
-const inter = Inter({ subsets: ["latin"] });
+const cairo = Cairo({ subsets: ['arabic'], weight: ['300', '200'] });
 
 export const metadata = {
   title: "Design Me !",
@@ -23,7 +23,7 @@ export default async function RootLayout({ children, params }) {
 
 
   return (
-    <html lang={params.locale} dir={direction}>
+    <html lang={params.locale} dir={direction} className={cairo.className}>
       <body>
         <NextIntlClientProvider messages={messages} >
 

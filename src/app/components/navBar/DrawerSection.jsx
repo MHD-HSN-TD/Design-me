@@ -5,11 +5,9 @@ const DrawerSection = ({ bg, links }) => {
 
     const navClickHandler = () => {
         document.getElementById('my-drawer-3').click()
-        console.log('clicked')
     }
-    // console.log(clickHandler)
     return (
-        <div className="drawer-side">
+        <div className="drawer-side z-50">
             <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
             <ul className={`menu ${bg} min-h-full w-80 p-4`}>
                 {/* Sidebar content here */}
