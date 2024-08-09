@@ -2,6 +2,7 @@
 import { Link } from '@/navigation'
 import React from 'react'
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher'
+import NavLinks from './navLinks'
 
 const DrawerSection = ({ bg, links, locale }) => {
     // console.log(locale)
@@ -14,7 +15,9 @@ const DrawerSection = ({ bg, links, locale }) => {
             <ul className={`menu ${bg} min-h-full w-80 p-4`}>
                 {/* Sidebar content here */}
                 <div>THIS IS DIV</div>
-                {links.map(el => <li id={el.id} ><Link id={el.id} href={el.href} onClick={navClickHandler}>{el.name}</Link></li>)}
+                {/* {links.map(el => <li id={el.id} key={el.id}><Link id={el.id} href={el.href} onClick={navClickHandler}>{el.name}</Link></li>)} */}
+                {<NavLinks locale={locale} onClick={navClickHandler}></NavLinks>}
+
                 {/* <LanguageSwitcher LanguageSwitcherlocale={locale}></LanguageSwitcher> */}
 
             </ul>
