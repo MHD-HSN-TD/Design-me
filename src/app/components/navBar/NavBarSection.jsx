@@ -23,7 +23,7 @@ const NavBarSection = async ({ bg, links, locale }) => {
         <div className="hidden flex-none lg:block">
             <ul className="menu menu-horizontal">
                 {/* Navbar menu links here */}
-                {links.map(el => <li id={el.id}><Link href={el.href}>{el.name}</Link></li>)}
+                {links.map(el => <li id={el.id}><Link id={el.id} href={el.href}>{el.name}</Link></li>)}
                 <LanguageSwitcher locale={locale}></LanguageSwitcher>
             </ul>
         </div>

@@ -16,6 +16,6 @@ export default function HomePage() {
     <br />
     <Link href="/test" >go to the test</Link>
 
-    <h1>{t('title')}</h1>;
+    <h1>{t('title')}</h1>
   </div>
 }

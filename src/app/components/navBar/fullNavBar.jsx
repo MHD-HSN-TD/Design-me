@@ -1,3 +1,4 @@
+'use client'
 import NavBarSection from "./NavBarSection";
 import DrawerSection from "./DrawerSection";
 import { getLocale } from "next-intl/server";
@@ -6,7 +7,7 @@ import { getLocale } from "next-intl/server";
 
 
 
-const NavBar = async ({ children }) => {
+const NavBar = ({ children, locale }) => {
     // choose the color of the navBar and the Drawer
     const backGroundColor = ' bg-primary'
 
@@ -24,9 +25,6 @@ const NavBar = async ({ children }) => {
         { id: 3, href: '/about', name: 'حول' },
     ]
 
-    // get the current local (lang)
-    const locale = await getLocale();
-
 
     let links
     const navBarLinksLangChecker = () => {
@@ -36,7 +34,7 @@ const NavBar = async ({ children }) => {
             links = [...links_EN]
         } else return
     }
-    // call the fnc
+    // call the func
     navBarLinksLangChecker()
 
 
@@ -44,7 +42,7 @@ const NavBar = async ({ children }) => {
 
     return (
         <div>
-            <div className={`drawer  r`}>
+            <div className={`drawer`}>
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col theme-controller">
                     {/* Navbar */}
