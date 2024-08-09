@@ -1,10 +1,10 @@
-// "use client"
+"use client"
 import React from 'react'
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher'
 
 const Footer = ({ locale }) => {
     return (
-        <footer className="footer bg-base-200 text-base-content p-10">
+        <footer className="footer bg-primary text-base-content p-10">
             <aside>
                 <svg
                     width="50"
@@ -23,7 +23,7 @@ const Footer = ({ locale }) => {
                     Providing reliable tech since 1992
                 </p>
             </aside>
-            {/* <LanguageSwitcher LanguageSwitcherlocale={locale}></LanguageSwitcher> */}
+            <LanguageSwitcher LanguageSwitcherlocale={locale}></LanguageSwitcher>
             <nav>
                 <h6 className="footer-title">Services</h6>
                 <a className="link link-hover">Branding</a>

@@ -4,13 +4,13 @@ import { usePathname, useRouter } from '@/navigation';
 import Image from 'next/image';
 
 const LanguageSwitcher = ({ LanguageSwitcherlocale }) => {
-    console.log(LanguageSwitcherlocale)
+    // console.log(LanguageSwitcherlocale)
     const pathname = usePathname();
     const router = useRouter();
 
     const changeLanguage = (lang) => {
         console.log(lang)
-        // router.push(router.pathname, router.asPath, { locale: lang });
+        // router.pusbh(router.pathname, router.asPath, { locale: lang });
         router.replace(pathname, { locale: lang });
     };
 

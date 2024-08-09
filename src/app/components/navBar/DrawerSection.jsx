@@ -15,6 +15,8 @@ const DrawerSection = ({ bg, links, locale }) => {
                 {/* Sidebar content here */}
                 <div>THIS IS DIV</div>
                 {links.map(el => <li id={el.id} ><Link id={el.id} href={el.href} onClick={navClickHandler}>{el.name}</Link></li>)}
+                {/* <LanguageSwitcher LanguageSwitcherlocale={locale}></LanguageSwitcher> */}
+
             </ul>
         </div>
     )

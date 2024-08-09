@@ -4,7 +4,7 @@ import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher"
 // import { getLocale } from "next-intl/server";
 const NavBarSection = async ({ bg, links, locale }) => {
     // const locale = await getLocale();
-    console.log(locale)
+
     // console.log(params)
     return <nav className={`navbar ${bg} w-full`}>
         <div className="flex-none lg:hidden">

@@ -1,4 +1,3 @@
-// "use client"
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 
@@ -7,7 +6,7 @@ import { Link } from '@/navigation';
 export default function HomePage() {
   const t = useTranslations('HomePage');
 
-  return <div>
+  return <div className=" h-svh">
 
     <Link href="/" locale="en">Switch to en</Link>
     <br />

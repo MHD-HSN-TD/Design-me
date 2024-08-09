@@ -20,8 +20,6 @@ export default async function RootLayout({ children, params }) {
 
   const locale = await getLocale();
   const direction = getLangDir(locale);
-  console.log(' layout', locale)
-  console.log(' layout', params)
 
   return (
     <html lang={params.locale} dir={direction} className={cairo.className}>
