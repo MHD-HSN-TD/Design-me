@@ -1,8 +1,10 @@
+'use client'
 import { Link } from '@/navigation'
 import React from 'react'
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher'
 
-const DrawerSection = ({ bg, links }) => {
-
+const DrawerSection = ({ bg, links, locale }) => {
+    // console.log(locale)
     const navClickHandler = () => {
         document.getElementById('my-drawer-3').click()
     }

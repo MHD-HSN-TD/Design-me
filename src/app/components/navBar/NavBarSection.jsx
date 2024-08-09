@@ -1,7 +1,10 @@
+
 import { Link } from "@/navigation"
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher"
+// import { getLocale } from "next-intl/server";
 const NavBarSection = async ({ bg, links, locale }) => {
-
+    // const locale = await getLocale();
+    console.log(locale)
     // console.log(params)
     return <nav className={`navbar ${bg} w-full`}>
         <div className="flex-none lg:hidden">
@@ -24,7 +27,7 @@ const NavBarSection = async ({ bg, links, locale }) => {
             <ul className="menu menu-horizontal">
                 {/* Navbar menu links here */}
                 {links.map(el => <li id={el.id}><Link id={el.id} href={el.href}>{el.name}</Link></li>)}
-                <LanguageSwitcher locale={locale}></LanguageSwitcher>
+                <LanguageSwitcher LanguageSwitcherlocale={locale}></LanguageSwitcher>
             </ul>
         </div>
     </nav>

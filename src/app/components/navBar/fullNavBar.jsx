@@ -1,4 +1,3 @@
-'use client'
 import NavBarSection from "./NavBarSection";
 import DrawerSection from "./DrawerSection";
 import { getLocale } from "next-intl/server";
@@ -7,10 +6,9 @@ import { getLocale } from "next-intl/server";
 
 
 
-const NavBar = ({ children, locale }) => {
+const NavBar = async ({ children }) => {
     // choose the color of the navBar and the Drawer
     const backGroundColor = ' bg-primary'
-
 
     const links_EN = [
         { id: 0, href: '/', name: 'Home' },
@@ -24,6 +22,9 @@ const NavBar = ({ children, locale }) => {
         { id: 2, href: '/services', name: 'خدماتنا' },
         { id: 3, href: '/about', name: 'حول' },
     ]
+
+    const locale = await getLocale();
+    console.log('this is from the nav', locale)
 
 
     let links
@@ -50,7 +51,7 @@ const NavBar = ({ children, locale }) => {
                     {/* Page content here */}
                     {children}
                 </div>
-                <DrawerSection bg={backGroundColor} links={links} />
+                <DrawerSection bg={backGroundColor} links={links} locale={locale} />
             </div>
         </div>
     )
