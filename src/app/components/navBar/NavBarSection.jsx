@@ -7,7 +7,7 @@ const NavBarSection = async ({ bg, locale }) => {
     // const locale = await getLocale();
 
     // console.log(params)
-    return <nav className={`navbar ${bg} w-full`}>
+    return <nav className={`navbar ${bg} w-full justify-between`}>
         <div className="flex-none lg:hidden">
             <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
                 <svg
@@ -23,14 +23,14 @@ const NavBarSection = async ({ bg, locale }) => {
                 </svg>
             </label>
         </div>
-        <div className="mx-2 flex-1 px-2">Design Me</div>
+        <div className="text-xl">Design Me</div>
         <div className="hidden flex-none lg:block">
             <ul className="menu menu-horizontal">
                 {/* Navbar menu links here */}
                 {/* {links.map(el => <li id={el.id}><Link id={el.id} href={el.href}>{el.name}</Link></li>)} */}
                 {<NavLinks locale={locale}></NavLinks>}
-
                 <LanguageSwitcher LanguageSwitcherlocale={locale}></LanguageSwitcher>
+
             </ul>
         </div>
     </nav>
