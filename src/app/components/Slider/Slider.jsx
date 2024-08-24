@@ -35,19 +35,20 @@ const Slider = () => {
 
                     <SplideSlide data-splide-interval="3000">
                         <img src="imgs/slider/1.jpg" alt="Image 1"
-                            className="kenburns-bottom-left" />
+                            className="kenburns-top" />
                     </SplideSlide>
                     <SplideSlide>
                         <img src="imgs/slider/2.jpg"
-                            className="kenburns-top-right" alt="Image 2" />
+                            className="kenburns-top" alt="Image 2" />
+                        <div>helll</div>
                     </SplideSlide>
                     <SplideSlide>
                         <img src="imgs/slider/1.jpg" alt="Image 1"
-                            className="kenburns-bottom-left" />
+                            className="kenburns-top" />
                     </SplideSlide>
                     <SplideSlide>
                         <img src="imgs/slider/2.jpg"
-                            className="kenburns-top-right" alt="Image 2" />
+                            className="kenburns-top" alt="Image 2" />
                     </SplideSlide>
 
                 </SplideTrack>

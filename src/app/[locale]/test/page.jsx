@@ -35,26 +35,26 @@ export default function page({ params }) {
                     type="radio"
                     name="theme-buttons"
                     className="btn theme-controller join-item"
-                    aria-label="Default"
-                    value="default" />
+                    aria-label="retro   "
+                    value="retro    " />
                 <input
                     type="radio"
                     name="theme-buttons"
                     className="btn theme-controller join-item"
-                    aria-label="primaryTheme"
-                    value="primaryTheme" />
+                    aria-label="luxury"
+                    value="luxury" />
                 <input
                     type="radio"
                     name="theme-buttons"
                     className="btn theme-controller join-item"
-                    aria-label="Dark"
-                    value="dark" />
+                    aria-label="coffee"
+                    value="coffee" />
                 <input
                     type="radio"
                     name="theme-buttons"
                     className="btn theme-controller join-item"
-                    aria-label="night"
-                    value="night" />
+                    aria-label="cmyk"
+                    value="cmyk" />
 
             </div>
         </div>

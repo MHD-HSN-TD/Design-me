@@ -10,7 +10,7 @@ import Footer from "../components/Footer/Footer";
 const cairo = Cairo({ subsets: ['arabic'], weight: ['400'] });
 
 export const metadata = {
-  title: "Design Me !",
+  title: "Design Me ",
   description: "DesignMe Company ...We create your imgagination  ",
 };
 
