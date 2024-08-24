@@ -8,13 +8,11 @@ const NavLinks = ({ locale, onClick }) => {
         { id: 1, href: "/test", name: "test" },
         { id: 2, href: "/services", name: "services" },
         { id: 3, href: "/about", name: "about" },
-        { id: 3, href: "/about", name: "about" },
     ];
     const links_AR = [
         { id: 0, href: "/", name: "الصفحة الرئيسية" },
         { id: 1, href: "/test", name: "تجربة" },
         { id: 2, href: "/services", name: "خدماتنا" },
-        { id: 3, href: "/about", name: "حول" },
         { id: 3, href: "/about", name: "حول" },
     ];
     let links

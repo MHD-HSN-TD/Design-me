@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.kenburns-bottom-left {
+    animation: kenburns-bottom-left 5s ease-out alternate infinite both;
+}
+
+.kenburns-top-right {
+    animation: kenburns-top-right 5s ease-out infinite alternate both;
+}
+
+@keyframes kenburns-bottom-left {
+    0% {
+        transform: scale(1) translate(0, 0);
+        transform-origin: 16% 84%;
+    }
+    100% {
+        transform: scale(1.25) translate(-20px, 15px);
+        transform-origin: left bottom;
+    }
+}
+
+@keyframes kenburns-top-right {
+    0% {
+        transform: scale(1) translate(0, 0);
+        transform-origin: 84% 16%;
+    }
+    100% {
+        transform: scale(1.25) translate(20px, -15px);
+        transform-origin: right top;
+    }
+}

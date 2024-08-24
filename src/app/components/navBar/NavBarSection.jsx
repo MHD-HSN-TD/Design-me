@@ -2,6 +2,7 @@
 import { Link } from "@/navigation"
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher"
 import NavLinks from "./navLinks"
+import Image from "next/image"
 // import { getLocale } from "next-intl/server";
 const NavBarSection = async ({ bg, locale }) => {
     // const locale = await getLocale();
@@ -23,7 +24,9 @@ const NavBarSection = async ({ bg, locale }) => {
                 </svg>
             </label>
         </div>
-        <div className="text-xl">Design Me</div>
+        <Image src='/imgs/logo-white.png'
+            width='130'
+            height='130' alt='DisgnMe' />
         <div className="hidden flex-none lg:block">
             <ul className="menu menu-horizontal">
                 {/* Navbar menu links here */}
