@@ -7,11 +7,16 @@ import Image from 'next/image'
 
 const Footer = ({ locale }) => {
     return (
-        <footer className="footer bg-primary text-base-content p-10">
-            <aside>
+        <footer className="footer bg-primary text-base-content p-4">
+            <aside
+            // className="lg:w-30  lg:h-30  w-60 h-60 relative"
+            >
                 <Image src='/imgs/logo-white.png'
-                    width='200'
-                    height='200' alt='DisgnMe' />
+                    // className=" object-contain"
+                    width={'200'}
+                    height='200'
+                    // fill={true}
+                    alt='DisgnMe' />
                 <p>
                     Desing me Industries Ltd.
                     <br />
@@ -19,7 +24,7 @@ const Footer = ({ locale }) => {
                 </p>
             </aside>
 
-            <h6 className="footer-title">Desing me  </h6>
+            {/* <h6 className="footer-title">Desing me  </h6> */}
             <nav className="menu">
                 <li className='text-lg'>Links</li>
                 {<NavLinks locale={locale}></NavLinks>}
