@@ -11,7 +11,7 @@ const cairo = Cairo({ subsets: ['arabic'], weight: ['400'] });
 
 export const metadata = {
   title: "Design Me !",
-  description: "Design Me ! ..... ",
+  description: "DesignMe Company ...We create your imgagination  ",
 };
 
 export default async function RootLayout({ children, params }) {
